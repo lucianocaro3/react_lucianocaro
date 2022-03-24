@@ -1,15 +1,23 @@
 import "./Navbar.css"
+import logo from "../img/sneaker.png"
+import Cartwidget from "./Cartwidget";
 
- function Navbar() {
-  return (
+
+
+
+
+ function Navbar(props) {
+  
+   return (
     <div>
-      <h1> Sneaker World</h1>
       <nav>
+      <img src = {logo} alt="logo" /> 
         <a href="#"> Hombre </a>
         <a href="#"> Mujer </a>
         <a href="#"> Niños </a>
         <a href="#"> Marcas </a>
         <a href="#"> Contacto </a>
+        <Cartwidget/>
       </nav>
     </div>
   );
