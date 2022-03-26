@@ -1,6 +1,6 @@
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-function Cartwidget () {
+const Cartwidget = () => {
 return ( 
     <ShoppingCartIcon color="disabled"/>
 )  

@@ -2,11 +2,7 @@ import "./Navbar.css"
 import logo from "../img/sneaker.png"
 import Cartwidget from "./Cartwidget";
 
-
-
-
-
- function Navbar(props) {
+ const Navbar = () => {
   
    return (
     <div>
