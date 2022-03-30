@@ -1,11 +1,11 @@
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: antiquewhite;
    align-items: center;
  padding-right: 30px;
- padding-left: 20px;
+
   
 }
 
@@ -21,3 +21,10 @@ div{
     text-align: center;
 }
 
+button{
+    margin: 10px ;
+}
+
+#comprar{
+    width: 200px;
+}
