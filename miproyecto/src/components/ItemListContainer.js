@@ -1,16 +1,43 @@
-import { Itemcount } from "./Itemcount";
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList"
 
-const Itemlist = ({nombre,apellido}) => {
-  let  onAdd = () =>{
-        console.log("Gracias por tu compra!")
-    }
-return(
-    <> 
-    <h1> holaa bienvenido {nombre} {apellido}</h1>
-    <Itemcount stock={5} initial={1} onAdd={onAdd}/>
+const zapatillas = [
+  { nombre: "Jordan 1", talle: "40", precio: "$40k" },
+  { nombre: "Jordan 1", talle: "40", precio: "$40k" },
+  { nombre: "Jordan 1", talle: "40", precio: "$40k" },
+  { nombre: "Jordan 1", talle: "40", precio: "$40k" },
+];
+
+
+
+const ItemlistContainer = ({ nombre, apellido }) => {
+    const [productos, setProductos] = useState([]);
+    
+        const promesa = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(zapatillas);
+            }, 2000);
+          
+        });
+     
+    
+    useEffect(() => {
+      
+      promesa.then( () =>{
+          setProductos(productos)
+          console.log("Esta funcionando")
+      } )
+    
+    
+    
+    
+    }, []);
+
+  return (
+    <>
+     <ItemList arrayZapatillas = {productos} />
     </>
-   
-)
-}
+  );
+};
 
-export default Itemlist
+export default ItemlistContainer;

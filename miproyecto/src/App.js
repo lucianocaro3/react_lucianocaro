@@ -1,5 +1,6 @@
-import Itemlist from "./components/ItemListContainer";
+import ItemlistContainer from "./components/ItemListContainer";
 import Navbar from "./components/Navbar";
+
 
 const App = () => {
   const name = "Luciano";
@@ -7,7 +8,8 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Itemlist id="1" nombre={name} apellido={apellido} />
+      <ItemlistContainer id="1" nombre={name} apellido={apellido} />
+      
     </>
   );
 };
